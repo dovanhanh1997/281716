@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = [6, 5, 4, 42, 1, 3, 64, 8, 9, 7];
+    let value = window.parseInt(prompt("Nhập giá trị tìm kiểm"));
+    let i;
+    console.log(array.length);
+
+    for (i = 0; i < array.length; i++) {
+        if (value == array[i]) {
+            array.push(0);
+            for (let j = i; j < array.length; j++) {
+                array[j] = array[j+1];
+            }
+        }
+    }
+    alert(array);
+
+</script>
+</body>
+</html>
